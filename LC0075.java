@@ -1,20 +1,25 @@
 public class LC0075 {
     public static void sortColors(int[] nums) {
-        boolean swapped = true;
+        int zero = 0, one = 0, two = 0;
         for (int i = 0; i < nums.length; i++) {
-            swapped = false;
-            for (int j = 1; j < nums.length - i; j++) {
-                if(nums[j] < nums[j-1]){
-                    int temp = nums[j];
-                    nums[j] = nums[j-1];
-                    nums[j-1] = temp;
-                    swapped = true;
-                }
-            }
-            if(swapped == false){
-                break;
+            if(nums[i]==0){
+                zero++;
+            } else if ( nums[i] == 1){
+                one++;
+            } else {
+                two++;
             }
         }
+        for (int i = 0; i < zero; i++) {
+            nums[i] = 0;
+        }
+        for (int i = zero ; i < zero + one; i++) {
+            nums[i] = 1;
+        }
+        for (int i = zero + one; i < zero + one + two; i++) {
+            nums[i] = 2;
+        }
+        
     }
     public static void main(String[] args) {
         int[] nums = {2,0,2,1,1,0};
