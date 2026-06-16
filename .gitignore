@@ -34,3 +34,7 @@ bin/
 # OS files
 .DS_Store
 Thumbs.db
+
+# git add .
+# git commit -m "Add LCXXXX solution"
+# git push

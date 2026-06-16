@@ -6,13 +6,11 @@ public class LC0007 {
         while (x != 0) {
             int digit = x % 10;
 
-            // Check for positive overflow
             if (reverse > Integer.MAX_VALUE / 10 ||
                 (reverse == Integer.MAX_VALUE / 10 && digit > 7)) {
                 return 0;
             }
 
-            // Check for negative overflow
             if (reverse < Integer.MIN_VALUE / 10 ||
                 (reverse == Integer.MIN_VALUE / 10 && digit < -8)) {
                 return 0;
