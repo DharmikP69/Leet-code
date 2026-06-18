@@ -23,7 +23,7 @@ public class LC0016 {
                 } else if (sum > target) {
                     right--;
                 } else {
-                    return sum; // exact match
+                    return sum;
                 }
             }
         }
