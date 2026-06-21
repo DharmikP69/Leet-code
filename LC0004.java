@@ -5,8 +5,8 @@ public class LC0004 {
         int j = 0;
         int k = 0;
 
-        while(i < nums1.length && j < nums2.length){
-            if(nums1[i] < nums2[j]){
+        while (i < nums1.length && j < nums2.length) {
+            if (nums1[i] < nums2[j]) {
                 ans[k] = nums1[i];
                 i++;
                 k++;
@@ -16,27 +16,28 @@ public class LC0004 {
                 k++;
             }
         }
-        while(j < nums2.length){
+        while (j < nums2.length) {
             ans[k] = nums2[j];
             j++;
             k++;
         }
-        while(i < nums1.length){
-            ans[k] = nums2[i];
+        while (i < nums1.length) {
+            ans[k] = nums1[i];
             i++;
             k++;
         }
 
-        if(nums1.length + nums2.length % 2 ==0){
-            return ans[nums1.length + nums2.length / 2];
-        } else {
-            return (ans[nums1.length + nums2.length / 2 - 1] + ans[nums1.length + nums2.length / 2]) / 2.0;  
+        int n = nums1.length + nums2.length;
+        if (n % 2 == 1) { 
+            return ans[n / 2];
+        } else { 
+            return (ans[n / 2 - 1] + ans[n / 2]) / 2.0;
         }
     }
-    
+
     public static void main(String[] args) {
-        int[] arr1 = {1,3};
-        int[] arr2 = {2};
+        int[] arr1 = { 1, 3 };
+        int[] arr2 = { 2 };
         double ans = findMedianSortedArrays(arr1, arr2);
         System.out.println(ans);
     }
