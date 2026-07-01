@@ -1,4 +1,4 @@
-public class LC141 {
+public class LC0141 {
 
     public static boolean hasCycle(ListNode head) {
         ListNode slow = head;
