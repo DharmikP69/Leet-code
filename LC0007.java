@@ -27,7 +27,7 @@ public class LC0007 {
         System.out.print("Enter number : ");
         int n = sc.nextInt();
         int ans = reverse(n);
-        System.out.print("The reverse number of " + n + " is " + ans);
+        System.out.print(ans);
         sc.close();
     }
 }
